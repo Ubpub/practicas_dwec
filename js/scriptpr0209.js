@@ -28,6 +28,6 @@ if (
     linea = "Línea 3";
 };
 if(linea != null)
-    alert("Tienes que tomar la " + linea + " para ir desde la " + calle + " hasta el trabajo.");
+    alert(`Tienes que tomar la ${ linea } para ir desde la ${ calle } hasta el trabajo.`);
 else
     alert("No hay líneas de autobuses para esa calle");

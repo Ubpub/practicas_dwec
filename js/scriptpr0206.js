@@ -11,7 +11,7 @@ while(isNaN(numeroK) || numeroK == "" || numeroK == null) {
 }
 
 for(let i = 1; i <= numeroK; i++) {
-    let multiplicacion = numeroN + " * " + i;
+    let multiplicacion = `${ numeroN } * ${ i }`;
     let resultado = numeroN * i;
-    console.log(multiplicacion + " = " + resultado);
+    console.log(`${ multiplicacion } = ${ resultado }`);
 }
