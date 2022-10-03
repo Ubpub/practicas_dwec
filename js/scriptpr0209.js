@@ -5,7 +5,7 @@ calle = calle.toLowerCase();
 
 let linea = null;
 
-if (
+if ( // Se puede hacer con switch sin break
     calle == "calle los claveles" || 
     calle == "calle el rosal" || 
     calle == "calle las hortensias" ||

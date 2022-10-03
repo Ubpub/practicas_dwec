@@ -1,5 +1,5 @@
 let num = null;
-let mayor = null;
+let mayor = null; //Se puede inicializar con -Infinity y no haría falta el aux
 let menor = null;
 let aux = 0;
 for(let i = 0; i < 5; i++) {
