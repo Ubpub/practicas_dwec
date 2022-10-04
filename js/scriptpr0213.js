@@ -2,7 +2,21 @@ let numero = prompt("Introduce un número:");
 primerosNumeros(numero);
 
 function primerosNumeros(k) {
-    for ( i = 1; i <= k; i++) {
-        console.log(i);
+    let num = 0;
+    let i = 0;
+    while (i < k) {
+        if(isPrime(num)) {
+            console.log(num);
+            i++;
+        };
+        num++;
+    };
+};
+
+function isPrime(n) {
+    if(n == 0 || n == 1 || n == 4) return false;
+    for (let x = 2; x < (n / 2); x++) {
+        if (n % x == 0) return false;
     }
+    return true;
 };
