@@ -14,8 +14,8 @@ function primerosNumeros(k) {
 };
 
 function isPrime(n) {
-    if(n == 0 || n == 1 || n == 4) return false;
-    for (let x = 2; x < (n / 2); x++) {
+    if(n == 0 || n == 4) return false;
+    for (let x = 2; x < (n / 2); x++) { // (let i = 2; i <= n-1; i++)
         if (n % x == 0) return false;
     }
     return true;
