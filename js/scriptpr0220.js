@@ -8,7 +8,7 @@ function getFibonacciAt(n) {
         let num1 = 0;
         let num2 = 1;
         let suma = 0;
-        for (let i = 0; i < n; i++) {
+        for (let i = 2; i < n; i++) {
             suma = num1 + num2;
             num1 = num2;
             num2 = suma;
