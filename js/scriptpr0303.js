@@ -16,12 +16,10 @@ console.log(intersectObjects(objeto1, objeto2));
 
 function intersectObjects(objeto1, objeto2) {
     let objetoFinal = {};
-    for (let key1 in objeto1) {
-        for (let key2 in objeto2) {
-            if (key1 == key2) {
-                objetoFinal[key1] = objeto1[key1];
-                objetoFinal[key2] = objeto1[key2];
-            }
+    for (let key in objeto1) {
+        if (key in objeto2) {
+            objetoFinal[key] = objeto1[key];
+            objetoFinal[key] = objeto1[key];
         }
     }
     return objetoFinal;
