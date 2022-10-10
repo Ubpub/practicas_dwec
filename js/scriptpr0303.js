@@ -19,7 +19,7 @@ function intersectObjects(objeto1, objeto2) {
     for (let key in objeto1) {
         if (key in objeto2) {
             objetoFinal[key] = objeto1[key];
-            objetoFinal[key] = objeto1[key];
+            objetoFinal[key] = objeto2[key]; // Se asigna solo este último valor
         }
     }
     return objetoFinal;
