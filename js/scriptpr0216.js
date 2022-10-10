@@ -12,4 +12,14 @@ function convertToBytes(capacity, from) {
                     from == "EB" || from == "Exabyte" ? capacity * 1000000000000000000 :
                     "No permitido";
     console.log(resultado);
+} // Se puede hacer con switch
+
+function withSwitch(capacity, from) {
+    switch(from) {
+        case "B":
+        case "Byte":
+            capacity *= 1;
+            break;
+        // etc
+    }
 }
