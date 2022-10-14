@@ -8,9 +8,8 @@ let objeto2 = {
 console.log(mergeObjects(objeto1, objeto2));
 
 function mergeObjects(objeto1, objeto2) {
-    let objeto = {
+    return {
         ...objeto1,
         ...objeto2,
     };
-    return objeto;
 }

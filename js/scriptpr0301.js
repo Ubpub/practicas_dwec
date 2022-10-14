@@ -6,8 +6,5 @@ let obj = {
 console.log(cloneObject(obj));
 
 function cloneObject(obj) {
-    let copiaObj = {
-        ...obj,
-    }
-    return copiaObj;
+    return { ...obj } // return Object.assign({}, obj)
 }
