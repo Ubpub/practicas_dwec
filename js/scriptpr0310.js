@@ -10,6 +10,8 @@ function replaceWithPosition(str) {
     return cadena;
 }
 
+// Se puede hacer con una cadena y obteniendo el índice
+
 function replaceWithPositionV2(str) {
     str = str.toUpperCase().replace(" ", "").split("");
     let cadena = "";
