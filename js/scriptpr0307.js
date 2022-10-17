@@ -17,3 +17,15 @@ function countVowels(str) {
     }
     return "Vocales totales: " + vocales;
 }
+
+function countVowelsV2(str) {
+    str = str.toLowerCase();
+    const vocales = "aeiou";
+    let numVocales = 0;
+    for (let char of str) {
+        if (vocales.includes(char)) {
+            numVocales += 1;
+        }
+    }
+    return "Vocales totales: " + numVocales;
+}

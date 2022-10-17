@@ -5,9 +5,7 @@ function replaceWithPosition(str) {
     let cadena = "";
     for(let char of str) {
         let pos = char.charCodeAt()-64;
-        if(pos > 0 && pos < 27) cadena += " " + pos;
-        else if (pos > 14 && pos < 27) cadena += " " + (pos + 1);
-        else if (pos === 145) cadena += " " + 15;
+        cadena += " " + pos;
     }
     return cadena;
 }
