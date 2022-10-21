@@ -15,5 +15,5 @@ function generateUsername(arr) {
 }
 
 function numeroAleatorio() {
-    return Math.round(Math.random() * (9 - 0) + 0);
+    return Math.trunc(Math.random() * 9 + 1);
 }
