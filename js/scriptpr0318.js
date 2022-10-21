@@ -7,11 +7,8 @@ let personas = [
 console.log(generateUsername(personas))
 
 function generateUsername(arr) {
-    arr.forEach( item => {
-        let nickname = item.name.substring(0,1).toLowerCase() + item.surname.toLowerCase() + numeroAleatorio() + numeroAleatorio();
-        item["nickname"] = nickname;
-    } );
-    return arr
+    arr.forEach( item => item["nickname"] = item.name.substring(0,1).toLowerCase() + item.surname.toLowerCase() + numeroAleatorio() + numeroAleatorio() );
+    return arr;
 }
 
 function numeroAleatorio() {
