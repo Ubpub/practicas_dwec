@@ -4,3 +4,9 @@ console.log(max(numeros));
 function max(arr) {
     return arr.reduce( (acum, item) => Math.max(acum, item), -Infinity );
 }
+
+/* function maxV2(arr) {
+    arr.reduce( (acum, item) => {
+        return acum > item ? acum : item;
+    }, -Infinity );
+} */
