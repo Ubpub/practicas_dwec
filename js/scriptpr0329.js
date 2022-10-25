@@ -28,13 +28,19 @@ let datos = [
         }
     }
 ]
-console.log(getUsernames());
+console.log(getAverages());
 
-function getUsernames() {
-    let usernames = [];
+function getAverages() {
+    let notas = [];
     datos.forEach( item => {
-        let nickname = item.nombre.toLowerCase() + item.ape1.charAt(0).toLowerCase() + item.ape2.charAt(0).toLowerCase();
-        usernames.push(nickname);
+        let media = (item.notas.DWEC + item.notas.DIW + item.notas.DWES) / 3;
+        notas.push(
+            {
+                alumno: `${ item.nombre } ${ item.ape1 } ${ item.ape2 }`,
+                expediente: item.expediente,
+                nota_media: media.toFixed(2),
+            }
+        )
     } );
-    return usernames;
-}
+    return notas;
+};
