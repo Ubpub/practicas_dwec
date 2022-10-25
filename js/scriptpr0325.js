@@ -10,7 +10,7 @@ let datos = [
         notas: {
             DWEC: 7.8,
             DIW: 5.4,
-            DWEC: 9.4
+            DWES: 9.4
         }
     },
     {
@@ -28,7 +28,7 @@ let datos = [
         }
     }
 ]
-console.log(getAverageGrade('DIW'));
+console.log(getAverageGrade('DWES'));
 
 function getAverageGrade(str) {
     let media = "El módulo no existe";
