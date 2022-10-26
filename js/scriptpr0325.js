@@ -43,3 +43,8 @@ function getAverageGrade(str) {
     }
     return media;
 }
+
+function getAverageGradeV2(str) {
+    let total = datos.reduce( (acum, item) =>  acum + item.notas[str] , 0 );
+    return Math.round( (total / datos.length) *100 ) / 100; // Multiplica y divide entre 100 para redondearlo mejor
+}

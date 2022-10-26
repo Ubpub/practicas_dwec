@@ -34,7 +34,7 @@ function addNif(arr) {
     const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
     arr.forEach( item => {
         if (item.dni.length < 9) {
-            item['nif'] = item.dni + letras.charAt(Number(item.dni) % 23);
+            item.nif = item.dni + letras.charAt(Number(item.dni) % 23);
             delete item.dni;
         }
     } );
