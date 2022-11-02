@@ -31,11 +31,26 @@ let datos = [
 console.log(getNumberOfAlumnos('DAW'));
 
 function getNumberOfAlumnos(str) {
-    let numeroAlumnos = 0;
+    let numeroAlumnos = 0; // Se puede hacer con un filter
     datos.forEach( item => {
         if (item.ciclo == str) {
             numeroAlumnos++;
         }
     } );
     return numeroAlumnos;
+}
+
+function getNumberOfAlumnosV2(str) {
+    // Filter
+    return datos.filter( ({ciclo}) => ciclo == str)
+                .length;
+}
+
+function getNumberOfAlumnosV3(str) {
+    // Reduce desestructurando el segundo parámetro
+    return datos.reduce( (acum, {ciclo}) => {
+        if(ciclo == str) {
+            return ++acum;
+        }
+    } );
 }

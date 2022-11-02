@@ -39,3 +39,28 @@ function getAlumnosByCiclo(str) {
     } );
     return alumnos;
 }
+
+function getAlumnosByCicloV2(str) {
+    alumnos = [];
+    datos.filter( item => item.ciclo == str)
+         .forEach( item => alumnos.push(`${item.nombre} ${item.ape1} ${item.ape2}`));
+    return alumnos;
+}
+
+function getAlumnosByCicloV3(str) {
+    // Desestructurización
+    alumnos = [];
+    datos.filter( item => item.ciclo == str)
+         .forEach( 
+            ({nombre, ape1, ape2}) => alumnos.push(`${ nombre } ${ ape1 } ${ ape2 }`)
+         );
+    return alumnos;
+}
+
+function getAlumnosByCicloV4(str) {
+    // Función map
+    return datos.filter( item => item.ciclo == str)
+         .map( 
+            ({nombre, ape1, ape2}) => `${ nombre } ${ ape1 } ${ ape2 }`,
+         );
+}

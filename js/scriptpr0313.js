@@ -2,8 +2,11 @@ console.log(isIsograma("acondicionar"));
 
 function isIsograma(str) {
     let letras = countLetters(str);
+    console.log("Letras: ", letras);
     for (key in letras) {
-        if (letras[key] = 1) return false;
+        console.log("Key: ", key);
+        console.log("Letra: ", letras[key]);
+        // if (letras[key] = 1) return false;
     }
     return true;
 }

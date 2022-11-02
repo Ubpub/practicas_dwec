@@ -28,7 +28,7 @@ let datos = [
         }
     }
 ]
-console.log(getAverages());
+console.log(getAveragesV2());
 
 function getAverages() {
     let notas = [];
@@ -44,3 +44,25 @@ function getAverages() {
     } );
     return notas;
 };
+
+function getAveragesV2() {
+    return datos.map( item => {
+        let media = (item.notas.DWEC + item.notas.DIW + item.notas.DWES) / 3;
+        return {
+            alumno: `${ item.nombre } ${ item.ape1 } ${ item.ape2 }`,
+            expediente: item.expediente,
+            nota_media: media.toFixed(2), // Utilizar la función calcularMedia()
+        }
+    } )
+};
+
+function calcularMedia(notas) {
+    suma = 0;
+    countNotas = 0;
+
+    let valores = Object.values( notas )
+                         .reduce( (acum, item, index, arr) => {
+                            return index != arr.length-1 ? acum+ item : (acum + item)/arr.length;
+                         }, 0 )
+                         .toFixed(2);
+}

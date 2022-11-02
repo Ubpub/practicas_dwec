@@ -38,3 +38,8 @@ function getUsernames() {
     } );
     return usernames;
 }
+
+function getUsernamesV2() {
+    // Map
+    return datos.map( item => item.nombre.toLowerCase() + item.ape1[0].toLowerCase() + item.ape2[0].toLowerCase());
+}
