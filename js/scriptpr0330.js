@@ -45,3 +45,6 @@ function getUnsecurePass() {
     } );
     return alumnos;
 }
+
+// Hacer una función para comprobar si tiene min, mas y num.
+// Después de eso, utilizar filter
