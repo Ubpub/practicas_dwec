@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <title>Tablero de Ajedrez</title>
+    <style>
+        table {
+            border: 2px solid gray;
+            border-collapse: collapse;
+        }
+        td, th {
+            width: 80px;
+            height: 80px;
+        }
+        .cabeceras {
+            background-color: lightgray;
+            text-align: center;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .oddCell {
+            background-color: black;
+        }
+        .oddCell, .cell {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablero de Ajedrez</h1>
+    <div id="board"></div>
+    <script src="../js/ut04/scriptpr0404.js"></script>
+</body>
+</html>
