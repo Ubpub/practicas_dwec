@@ -14,7 +14,7 @@ divMeses.innerHTML = cadena;
 console.log(cadena); */
 
 let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-let div = document.getElementById('months');
+let div = document.querySelector('#months');
 for(let i = 1; i <= 12; i++) {
     let divMonth = document.createElement('div');
     divMonth.classList.add('month');
