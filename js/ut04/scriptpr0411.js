@@ -8,7 +8,6 @@ anadir.addEventListener('click', () => {
     if (elemento != false) {
         lista.append(elemento); // Añade el elemento obtenido a la lista
     }
-    console.log(todos);
 } );
 
 function addTodo() {
