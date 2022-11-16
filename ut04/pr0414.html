@@ -80,20 +80,41 @@
             box-shadow: 2px 3px 3px #4E4E4E;
             cursor: pointer;
         }
-        .anterior, .siguiente {
-            background-color: lightgray;
-            width: 2em;
-            height: 2em;
+        .menu-paginas {
+            position: relative;
+            margin: 30%;
+            padding-bottom: 1em;
         }
-        #menu-paginas {
+        .anterior, .siguiente {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 10em;
-            margin-left: 35%;
-            margin-bottom: 1em;
-            font-size: 1.5em;
+            background-color: lightgray;
+            border: 1px solid gray;
+            border-radius: 0.3em;
+            padding-bottom: 0.2em;
+            padding-left: 0.2em;
+            padding-right: 0.2em;
+            width: 2em;
+            height: 2em;
             font-weight: bold;
+            font-size: large;
+            box-shadow: 2px 3px 3px #4E4E4E;
+            cursor: pointer;
+        }
+        .anterior, .texto, .siguiente {
+            float: left;
+        }
+        .texto {
+            margin-top: 0.5em;
+            font-weight: bold;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+        }
+        table {
+            margin: 0 auto;
+        } table, td, th {
+            padding: 0.4em;
         }
     </style>
 </head>

@@ -98,7 +98,11 @@ let products = [
   
 ]
 
+let page = 1;
+let tamano = 8;
+let numPaginas = Math.ceil(products.length / tamano);
 showProductsPaginado();
+
 // showProducts(); // Muestra los productos en la página
 
 function showProducts() {
@@ -111,25 +115,33 @@ function showProducts() {
 }
 
 function showProductsPaginado() {
-  let tamano = 8;
   let products_section = document.getElementById('products-section');
-  let cantPaginas = Math.ceil(products.length / tamano);
-  let page = 1;
-  console.log(cantPaginas);
-  if (products.length > 8) {
-
-    products.filter( (_, index) => (index / 8) >= page - 1 && (index / 8) < page)
+  products_section.textContent = "";
+  if (products.length > tamano) {
+    products.filter( (_, index) => (index / tamano) >= page - 1 && (index / tamano) < page)
             .forEach( ({ id, product, price, image }) => {
               let producto = createProduct(id, product, price, image);
               products_section.append(producto); // Lo añade a la sección de productos
             } );
-    let menuPaginas = document.createElement("div");
-    menuPaginas.classList.add("menu-paginas");
-    let paginas = document.createElement("div");
-    paginas.textContent = `Mostrando ${ page } de ${ cantPaginas }`;
-    menuPaginas.append(paginas);
+    
 
-    products_section.append(menuPaginas);
+    // menuPaginado();
+    products_section.append(menuPaginado());
+    let anterior = document.getElementById("prev");
+    anterior.addEventListener('click', () => {
+      if (page != 1) {
+        page--;
+        showProductsPaginado();
+      }
+    });
+
+    let siguiente = document.getElementById("next");
+    siguiente.addEventListener('click', () => {
+      if (page != numPaginas) {
+        page++;
+        showProductsPaginado();
+      }
+    });
 
   } else {
     showProducts();
@@ -172,3 +184,16 @@ function createProduct(id, product, price, image) {
 
     return producto;
 }
+
+function menuPaginado() {
+    let pages = document.createElement("div");
+    pages.classList.add("menu-paginas");
+    pages.innerHTML = `
+      <div class="anterior" id="prev">&#9754;</div>
+      <span class="texto">Mostrando página ${ page } de ${ numPaginas }</span>
+      <div class="siguiente" id="next">&#10151;</div>
+    `;
+
+    return pages;
+}
+
