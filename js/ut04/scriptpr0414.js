@@ -98,12 +98,12 @@ let products = [
   
 ]
 
+let cesta = [];
+
 let page = 1;
 let tamano = 8;
 let numPaginas = Math.ceil(products.length / tamano);
 showProductsPaginado();
-
-// showProducts(); // Muestra los productos en la página
 
 function showProducts() {
   let products_section = document.getElementById('products-section');
@@ -175,6 +175,24 @@ function createProduct(id, product, price, image) {
 
     datos.textContent = `${ price } €/Kg`;
     boton.textContent= "Añadir";
+
+    boton.addEventListener('click', () => {
+      let resul = cesta.filter( ({producto}) => producto = product );
+      console.log(resul);
+      if (cesta.includes(product)) {
+        console.log("holaaa");
+      } else {
+        cesta.push(
+          {
+            "cantidad": 1,
+            "producto": product,
+            "precio": price,
+          }
+        )
+        console.log(cesta);
+      }
+    } );
+
     datos.append(boton);
 
     // Añade los divs creados al div del producto
