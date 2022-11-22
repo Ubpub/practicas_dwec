@@ -18,7 +18,7 @@ function colocarImagenes() {
     for (let i = 0; i < imagenes.length; i++) {
         let imagen = document.createElement("img");
         imagen.src = `../../imgs/${imagenes[i]}`;
-        imagen.alt = imagenes[1];
+        imagen.alt = imagenes[i];
         div.append(imagen);
     }
 }

@@ -1,7 +1,7 @@
 let li = document.querySelectorAll('li');
 console.log(li);
 
-Array.from(li).forEach( (item) => {
+Array.from(li).forEach( (item) => { // Se puede hacer directamente en la lista
     item.addEventListener('click', (e) => {
         if (!e.target.classList.contains("selected")) {
             li.forEach( (item) => {

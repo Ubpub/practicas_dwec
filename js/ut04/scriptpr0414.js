@@ -173,7 +173,8 @@ function createProduct(id, product, price, image) {
     boton.setAttribute("data-id-product", id); // Se le asigna un id al div del botón
     datos.classList.add("datos-prod");
 
-    datos.textContent = `${ price } €/Kg`;
+    let precio = (price.toString()).slice(0, 1) + "." + (price.toString()).slice(1);
+    datos.textContent = `${ precio } €/Kg`;
     boton.textContent= "Añadir";
 
     boton.addEventListener('click', () => {
