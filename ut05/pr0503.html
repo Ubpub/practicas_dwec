@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordenadas</title>
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table {
+            text-align: center;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        table, td, th {
+            border: 1px solid black;
+        }
+        td, th {
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+        }
+        td:hover, th:hover {
+            background-color: rgb(241, 241, 241);
+        }
+        .cabeceras {
+            background-color: lightgray;
+            cursor: default;
+        }
+        .cabeceras:hover {
+            background-color: lightgray;
+        }
+        .selected {
+            background-color: orange;
+        }
+        .selected:hover {
+            background-color: rgba(255, 214, 139);
+        }
+        .right-click {
+            background-color: red;
+        }
+        .right-click:hover {
+            background-color: rgb(255, 126, 126);
+        }
+    </style>
+</head>
+<body>
+    <h1>Coordenadas: <span id="coords"></span></h1>
+    <table id="tbl-casillas">
+
+    </table>
+    <script src="../js/ut05/script0503.js"></script>
+</body>
+</html>
