@@ -17,7 +17,7 @@ boton.addEventListener('click', () => {
 function colocarImagenes() {
     for (let i = 0; i < imagenes.length; i++) {
         let imagen = document.createElement("img");
-        imagen.src = `../../imgs/${imagenes[i]}`;
+        imagen.src = `../imgs/${imagenes[i]}`;
         imagen.alt = imagenes[1];
         div.append(imagen);
     }
