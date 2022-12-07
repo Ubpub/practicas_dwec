@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobar campos</title>
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <style>
+        table {
+            margin: 0 auto;
+        }
+        #correo, #pass1, #pass2 {
+            width: 90%
+        }
+        #button {
+            display: inline-block;
+            background-color: rgb(231, 231, 231);
+            border: 1px solid rgb(134, 134, 134);
+            border-radius: 0.3em;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            cursor: pointer;
+        }
+        #button:hover {
+            border: 1px solid rgb(177, 177, 177);
+            background-color: rgb(243, 243, 243);
+        }
+        .button {
+            text-align: center;
+            padding-top: 0.4em;
+        }
+        .tipoPass {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th colspan="2"><h2>Credenciales</h2></th>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="correo">Correo electrónico</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="text" name="correo" id="correo" placeholder="example@gmail.com"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="pass">Contraseña:</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="password" name="pass1" id="pass1" maxlength="18"></td>
+                <td>
+                    <table>
+                        <tr><td><span class="tipoPass"></span></td></tr>
+                        <tr>
+                            <td><progress value="0" max="4" id="securityBar"></progress></td>
+                        </tr>
+                    </table>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="pass">Vuelve a escribir la contraseña:</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="password" name="pass2" id="pass2" maxlength="18"></td>
+            </tr>
+            <tr>
+                <td class="button"><div id="button">Enviar</div></td>
+            </tr>
+        </table>
+    </form>
+    <script src="../js/ut05/script0507Corregido.js"></script>
+</body>
+</html>
