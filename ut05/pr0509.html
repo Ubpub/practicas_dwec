@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html {
+            height: 100%;
+        }
+        #modal {
+            position: relative;
+            height: 100vh;
+            /* display: none; */
+            background-color: rgba(0, 0, 0, 0.459);
+        }
+        #boton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            border-radius: 0.5em;
+            background-color: rgb(49, 77, 136);
+            color: white;
+            top: 2em;
+            left: 10em;
+            width: 15em;
+            height: 3em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #formulario {
+            /* display: none; */
+            position: absolute;
+            background-color: white;
+            border-radius: 1em;
+            box-shadow: 2px 2px 20px rgb(68, 68, 68);
+            width: 20em;
+            height: 20em;
+            top: 5em;
+            left: 40em;
+        }
+        #menu {
+            position: relative;
+            border: 1px solid rgb(202, 202, 202);
+            border-radius: 1em 1em 0 0;
+            height: 3em;
+        }
+        #login, #register {
+            width: 6em;
+            height: 2.9em;
+            border: 0.8px solid rgb(202, 202, 202);
+            cursor: pointer;
+        }
+        #login, #register, #close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+        }
+        #login {
+            border-radius: 1em 0 0 0;
+            color: red;
+        }
+        #register {
+            color: blue;
+        }
+        #close {
+            justify-content: end;
+            width: 6em;
+            height: 2.6em;
+            color: gray;
+            font-weight: bold;
+            font-size: large;
+        }
+        #login:hover, #register:hover {
+            background-color: rgb(236, 236, 236);
+            color: rgb(0, 0, 145);
+        }
+        .closeX {
+            cursor: pointer;
+        }
+        .closeX:hover {
+            color: red;
+        }
+        #loginForm, #registerForm {
+            border: 1px solid black;
+            border-radius: 0 0 1em 1em;
+        }
+        #loginForm {
+            /* display: none; */
+            height: 16.8em;
+        }
+        #registerForm {
+            display: none;
+            height: 21em;
+            background-color: white;
+        }
+        #emailLogin, #passwordLOgin, #buttonLogin,
+        #nameRegister, #emailRegister, #passwordRegister, #buttonRegister {
+            height: 5.5em;
+        }
+        .name, .emailForm, .passForm {
+            display: flex;
+            align-items: center;
+            height: 2.1em;
+            margin: 0.3em;
+            margin-left: 0.7em;
+        }
+        #nameInput, #emailInputLogin, #passLogin,
+        #emailInputReg, #passReg {
+            height: 2em;
+            width: 17em;
+        }
+        #checkboxRemember {
+            margin-left: 0.7em;
+        }
+        #loginBtn, #registerBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(167, 166, 166);
+            background-color: rgb(235, 235, 235);
+            border-radius: 0.4em;
+            padding-bottom: 0.2em;
+            width: 4em;
+            height: 2em;
+            font-size: 0.9em;
+            margin-left: 0.7em;
+        }
+        #loginBtn {
+            margin-top: 0.6em;
+        }
+    </style>
+</head>
+<body>
+    <div id="boton">Login - Registration Modal</div>
+    <div id="modal"></div>
+    <div id="formulario">
+        <div id="menu">
+            <div id="login">Login &#128100;</div>
+            <div id="register">Register &#9998;</div>
+            <div id="close"><span class="closeX">&#128473;</span></div>
+        </div>
+
+        <div id="loginForm">
+            <form action="#">
+                <div id="emailLogin">
+                    <div class="emailForm"><label for="email">Email</label><br></div>
+                    <div class="emailForm"><input type="email" name="email" id="emailInputLogin" placeholder="Enter email"></input></div>
+                </div>
+                <div id="passwordLogin">
+                    <div class="passForm"><label for="pass">Password</label><br></div>
+                    <div class="passForm"><input type="password" name="pass" id="passLogin" placeholder="Enter password"></input></div>
+                </div>
+                <div id="buttonLogin">
+                    <div id="checkboxRemember"><input type="checkbox" name="remember" id="remember">Remember me</div>
+                    <div id="loginBtn">LogIn</div>
+                </div>
+            </form>
+        </div>
+
+        <div id="registerForm">
+            <form action="#">
+                <div id="nameRegister">
+                    <div class="name"><label for="name">Your name</label><br></div>
+                    <div class="name"><input type="name" name="name" id="nameInput" placeholder="Enter yout name"></input></div>
+                </div>
+                <div id="emailRegister">
+                    <div class="emailForm"><label for="email">Email</label><br></div>
+                    <div class="emailForm"><input type="email" name="email" id="emailInputReg" placeholder="Enter new email"></input></div>
+                </div>
+                <div id="passwordRegister">
+                    <div class="passForm"><label for="pass">Password</label><br></div>
+                    <div class="passForm"><input type="password" name="pass" id="passReg" placeholder="New password"></input></div>
+                </div>
+                <div id="buttonRegister">
+                    <div id="registerBtn">LogIn</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/ut05/script0509.js"></script>
+</body>
+</html>
