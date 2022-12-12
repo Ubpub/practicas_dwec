@@ -12,11 +12,13 @@ function renderPage() {
         comunidad.textContent = com[i];
         comunidadSelect.append(comunidad);
     }
-    comunidadSelect.addEventListener('select', obtenerProvincias);
+    comunidadSelect.addEventListener('change', obtenerProvincias);
+    provinciaSelect.addEventListener('change', obtenerLocalidades);
 }
 
 function obtenerProvincias() {
     provinciaSelect.innerHTML = "";
+    provinciaSelect.innerHTML = `<option></option>`;
     if (comunidadSelect.value != "") {
         let prov = Object.keys(localidades[comunidadSelect.value]);
         for (let i = 0; i < prov.length; i++) {
@@ -25,19 +27,16 @@ function obtenerProvincias() {
             provinciaSelect.append(provincia);
         }
     }
-    provinciaSelect.addEventListener('select', obtenerLocalidades);
 }
 
 function obtenerLocalidades() {
-    console.log("LOCALIDADES");
     localidadSelect.innerHTML = "";
-    if (localidadSelect.value != "") {
-        let local = Object.keys(localidades[comunidadSelect.value][provinciaSelect.value]);
-        console.log(local);
-        /* for (let i = 0; i < local.length; i++) {
+    if (localidadSelect.value == "") {
+        let local = localidades[comunidadSelect.value][provinciaSelect.value];
+        for (let i = 0; i < local.length; i++) {
             let localidad = document.createElement('option')
             localidad.textContent = local[i];
             localidadSelect.append(localidad);
-        } */
+        }
     }
 }
