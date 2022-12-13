@@ -17,7 +17,7 @@
         #modal {
             position: relative;
             height: 100vh;
-            /* display: none; */
+            display: none;
             background-color: rgba(0, 0, 0, 0.459);
         }
         #boton {
@@ -36,7 +36,7 @@
             cursor: pointer;
         }
         #formulario {
-            /* display: none; */
+            display: none;
             position: absolute;
             background-color: white;
             border-radius: 1em;
@@ -89,12 +89,20 @@
         .closeX:hover {
             color: red;
         }
+        #alert {
+            display: none;
+            padding-left: 0.7em;
+            height: 2em;
+            background-color: #EF2C2C;
+            color: white;
+            font-size: small;
+        }
         #loginForm, #registerForm {
-            border: 1px solid black;
+            /* border: 1px solid black; */
             border-radius: 0 0 1em 1em;
         }
         #loginForm {
-            /* display: none; */
+            display: none;
             height: 16.8em;
         }
         #registerForm {
@@ -129,10 +137,14 @@
             background-color: rgb(235, 235, 235);
             border-radius: 0.4em;
             padding-bottom: 0.2em;
-            width: 4em;
+            width: 5em;
             height: 2em;
             font-size: 0.9em;
             margin-left: 0.7em;
+            cursor: pointer;
+        }
+        #loginBtn:hover, #registerBtn:hover {
+            background-color: aliceblue;
         }
         #loginBtn {
             margin-top: 0.6em;
@@ -149,8 +161,10 @@
             <div id="close"><span class="closeX">&#128473;</span></div>
         </div>
 
+        <div id="alert"></div>
+
         <div id="loginForm">
-            <form action="#">
+            <form>
                 <div id="emailLogin">
                     <div class="emailForm"><label for="email">Email</label><br></div>
                     <div class="emailForm"><input type="email" name="email" id="emailInputLogin" placeholder="Enter email"></input></div>
@@ -167,7 +181,7 @@
         </div>
 
         <div id="registerForm">
-            <form action="#">
+            <form>
                 <div id="nameRegister">
                     <div class="name"><label for="name">Your name</label><br></div>
                     <div class="name"><input type="name" name="name" id="nameInput" placeholder="Enter yout name"></input></div>
@@ -181,7 +195,7 @@
                     <div class="passForm"><input type="password" name="pass" id="passReg" placeholder="New password"></input></div>
                 </div>
                 <div id="buttonRegister">
-                    <div id="registerBtn">LogIn</div>
+                    <div id="registerBtn">Register</div>
                 </div>
             </form>
         </div>
