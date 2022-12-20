@@ -3,7 +3,7 @@ let patrones = {
     "numero": /^(\(\+\d{2}\))\s*((\d{3}\s\d{6})$|(\d{9}$))/,
     "correo": /^\w+[-]*\w+@(mail(.com|.es)|educa.jcyl.es)$/,
     "color": /^#([a-f0-9]{6}|[A-F0-9]{6})$/,
-    "ip": /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])\.((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){2}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/,
+    "ip": /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/,
     "url": /^(http|https)\:\/\/(www\.)?\w+\.(com|es|org)$/,
     "contrasena": /^(?=.*)(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/,
     "nif": /^\d{8}[A-Z]$/,
@@ -14,7 +14,6 @@ renderPage();
 
 function renderPage() {
     let btn_submit = document.querySelector('#btn-submit');
-    console.log(btn_submit);
     btn_submit.addEventListener('click', recogerCampos);
 }
 

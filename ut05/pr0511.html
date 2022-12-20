@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Validar fechas</title>
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <style>
+        #principal {
+            text-align: center;
+            margin-top: 3em;
+        }
+        #enviar {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="principal">
+        <form>
+            <h2>Introduce texto con al menos una fecha</h2>
+            <textarea name="texto" id="texto" cols="50" rows="5"></textarea>
+            <br/><br/>
+            <input type="button" value="Enviar" id="enviar">
+        </form>
+    </div>
+    <script src="../js/ut05/script0511.js"></script>
 </body>
 </html>
