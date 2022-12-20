@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar campos</title>
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <style>
+        #principal {
+            display: flex;
+            flex-direction: column;
+        }
+        #labels {
+            width: 15%;
+            float: left;
+            margin-bottom: 2%;
+        }
+        #inputs {
+            width: 15%;
+            float: left;
+            margin-bottom: 2%;
+        }
+        #btn-submit {
+            clear: both;
+            margin-left: 10%;
+            padding-bottom: 4px;
+            width: 6em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid gray;
+            border-radius: 0.3em;
+            background-color: rgb(225, 228, 231);
+            cursor: pointer;
+        }
+        #btn-submit:hover {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <h1>Formulario</h1>
+        <form action="#">
+            <div id="labels">
+                <label for="fecha">Fecha: </label><br>
+                <label for="numero">Número de teléfono: </label><br>
+                <label for="correo">Correo electrónico: </label><br>
+                <label for="color">Código de color: </label><br>
+                <label for="ip">Dirección IP: </label><br>
+                <label for="url">URL: </label><br>
+                <label for="contrasena">Contraseña: </label><br>
+                <label for="nif">NIF: </label><br>
+                <label for="matricula">Matrícula de coche: </label><br>
+            </div>
+            <div id="inputs">
+                <input type="text" name="fecha" id="fecha" required><br>
+                <input type="text" name="numero" id="numero" required><br>
+                <input type="text" name="correo" id="correo" required><br>
+                <input type="text" name="color" id="color" required><br>
+                <input type="text" name="ip" id="ip" required><br>
+                <input type="text" name="url" id="url" required><br>
+                <input type="text" name="contrasena" id="contrasena" required><br>
+                <input type="text" name="nif" id="nif" required><br>
+                <input type="text" name="matricula" id="matricula" required><br>
+            </div>
+            <div id="btn-submit">Comprobar</div>
+        </form>
+    </div>
+    <script src="../js/ut05/script0510.js"></script>
+</body>
+</html>
