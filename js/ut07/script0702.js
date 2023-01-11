@@ -1,7 +1,6 @@
 let url = 'https://swapi.dev/api/planets';
 let tabla = document.querySelector('#tabla');
 
-// obtenerPlanetas();
 fetchPlanets(url);
 
 function fetchPlanets(url) {
