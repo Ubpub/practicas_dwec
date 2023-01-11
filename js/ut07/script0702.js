@@ -5,7 +5,6 @@ let tabla = document.querySelector('#tabla');
 fetchPlanets(url);
 
 function fetchPlanets(url) {
-    
     fetch( url )
         .then( (response) => response.json() )
         .then( (json) => {
