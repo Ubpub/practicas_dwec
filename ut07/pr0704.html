@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El tiempo actual</title>
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <style>
+        h1 { text-align: center; }
+        #form-latlong {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3em;
+        }
+        .lat {
+            float: left;
+            margin: 1em;
+        }
+        .aux {
+            clear: both;
+        }
+        .long {
+            float: left;
+            margin: 0.7em;
+        }
+        .apikey {
+            float: left;
+            margin: 1em;
+        }
+        #buscar {
+            display: flex;
+            justify-content: center;
+            margin-left: 8em;
+            margin-top: 0.4em;
+            border: 1px solid gray;
+            background-color: rgb(230, 230, 230);
+            width: 5em;
+            cursor: pointer;
+        }
+        #buscar:hover {
+            background-color: rgb(240, 240, 240);
+            border-color: rgb(155, 155, 155);
+        }
+        .alert {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+            background-color: rgba(255, 0, 0, 0.616);
+            color: white;
+            font-weight: bold;
+            height: 3em;
+        }
+        #tiempo {
+            margin-left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <h1>El tiempo actual</h1>
+    <div id="form-latlong">
+        <form action="#">
+            <div class="lat">
+                <label for="lat">Latitud: </label>
+            </div>
+            <div class="lat">
+                <input type="text" name="lat" id="lat">
+            </div>
+            <div class="aux"></div>
+            <div class="long">
+                <label for="long">Longitud: </label>
+            </div>
+            <div class="long">
+                <input type="text" name="long" id="long">
+            </div>
+            <div class="aux"></div>
+            <div class="apikey">
+                <label for="apikey">ApiKey: </label>
+            </div>
+            <div class="apikey">
+                <input type="text" name="apikey" id="apikey">
+            </div>
+            <div class="aux"></div>
+            <div id="buscar">Buscar</div>
+            <div class="alert">Campo··<span id="campo"></span>··vacío</div>
+        </form>
+    </div>
+    <div id="tiempo">
+    </div>
+    <script src="../js/ut07/script0704.js"></script>
+</body>
+</html>
