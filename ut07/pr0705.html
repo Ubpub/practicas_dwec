@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El tiempo actual</title>
+    <link rel="stylesheet" href="../css/utstyle.css">
+    <style>
+        h1 { text-align: center; }
+        h2 { text-align: center; }
+        #form-localidad {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3em;
+        }
+        .localidad {
+            float: left;
+            margin: 0.6em;
+        }
+        .aux {
+            clear: both;
+        }
+        .apikey {
+            float: left;
+            margin: 1em;
+        }
+        #buscar {
+            display: flex;
+            justify-content: center;
+            margin-left: 8em;
+            margin-top: 0.4em;
+            border: 1px solid gray;
+            background-color: rgb(230, 230, 230);
+            width: 5em;
+            cursor: pointer;
+        }
+        #buscar:hover {
+            background-color: rgb(240, 240, 240);
+            border-color: rgb(155, 155, 155);
+        }
+        .alert {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+            background-color: rgba(255, 0, 0, 0.616);
+            color: white;
+            font-weight: bold;
+            height: 3em;
+        }
+        #tiempo {
+            display: flex;
+            justify-content: center;
+            /* border: 2px solid black; */
+        }
+        #tiempo > div {
+            width: 50%;
+        }
+        #icono {
+            /* border: 2px solid red; */
+            width: 5em;
+            height: 5em;
+            display: inline-block;
+        }
+        #detalles, .icono {
+            display: none;
+            /* border: 1px solid green; */
+            width: 100%;
+            text-align: center;
+            background-color: rgb(179, 179, 179);
+        }
+        #localidadTitulo {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Formulario -->
+    <h1>El tiempo actual</h1>
+    <div id="form-localidad">
+        <form action="#">
+            <div class="localidad">
+                <label for="localidad">Localidad: </label>
+            </div>
+            <div class="localidad">
+                <input type="text" name="localidad" id="localidad">
+            </div>
+            <div class="aux"></div>
+            <div class="apikey">
+                <label for="apikey">ApiKey: </label>
+            </div>
+            <div class="apikey">
+                <input type="text" name="apikey" id="apikey">
+            </div>
+            <div class="aux"></div>
+            <div id="buscar">Buscar</div>
+            <div class="alert">Campo··<span id="campo"></span>··vacío</div>
+        </form>
+    </div>
+
+    <!-- Resultado -->
+    <h2 id="localidadTitulo"></h2>
+    <div id="tiempo">
+        <div>
+            <table class="icono">
+                <tr>
+                    <th><div id="icono"></div></th>
+                </tr>
+            </table>
+            <table id="detalles">
+            </table>
+        </div>
+    </div>
+    <script src="../js/ut07/script0705.js"></script>
+</body>
+</html>
